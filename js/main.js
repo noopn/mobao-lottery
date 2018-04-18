@@ -93,6 +93,7 @@ $(function() {
     },
     // 最新结果图标
     newResultIcon: function(num) {
+      console.log(1);
       $(".new-result").html(
         $(".new-result").html() +
           "<span class='new-result-span shake freez shake-horizontal'><i class='iconfont icon-new'></i></span>"
