@@ -1,0 +1,8 @@
+document.body.insertAdjacentHTML("afterBegin",'<div hidden>\
+<svg xmlns="http://www.w3.org/2000/svg">\
+<symbol id="chipIn-item-10" width="100%" height="100%" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet"><g><rect rx="50%" width="195" height="195" x="2.5" y="2.5" stroke="#fff" stroke-width="5" fill="#00d9a5"/><text x="50%" y="120" text-anchor="middle" font-size="60" fill="#fff">10</text></g></symbol>\
+<symbol id="chipIn-item-50" width="100%" height="100%" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet"><g><rect rx="50%" width="195" height="195" x="2.5" y="2.5" stroke="#fff" stroke-width="5" fill="#02d2a0"/><text x="50%" y="120" text-anchor="middle" font-size="60" fill="#fff">50</text></g></symbol>\
+<symbol id="chipIn-item-100" width="100%" height="100%" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet"><g><rect rx="50%" width="195" height="195" x="2.5" y="2.5" stroke="#fff" stroke-width="5" fill="#00cfed"/><text x="50%" y="120" text-anchor="middle" font-size="60" fill="#fff">100</text></g></symbol>\
+<symbol id="chipIn-item-500" width="100%" height="100%" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet"><g><rect rx="50%" width="195" height="195" x="2.5" y="2.5" stroke="#fff" stroke-width="5" fill="#ffbd04"/><text x="50%" y="120" text-anchor="middle" font-size="60" fill="#fff">500</text></g></symbol>\
+<symbol id="chipIn-item-1000" width="100%" height="100%" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet"><g><rect rx="50%" width="195" height="195" x="2.5" y="2.5" stroke="#fff" stroke-width="5" fill="#fd8002"/><text x="50%" y="120" text-anchor="middle" font-size="60" fill="#fff">1000</text></g></symbol>'
+);

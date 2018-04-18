@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <script src="./js/flexible_css.debug.js"></script>
+    <script src="./js/flexible.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <title>抽奖</title>
+</head>
+
+<body>
+    <script src="./js/svg-sprite.js"></script>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="gold-box">
+                    <i class="iconfont icon-jindouyindou01"></i>
+                    <span class="gold-amount" id="j_gold">500</span>
+                    <span class="more-gold">
+                        <i class="iconfont icon-jiahao2"></i>
+                    </span>
+                </div>
+                <nav class="nav">
+                    <div class="nav-list">
+                        <div class="nav-item">
+                            <a href="javascript:">任务</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="javascript:">订单</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="javascript:">规则</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!-- 开奖结果 -->
+            <div class="lottery-result" id="lottery-result-box"></div>
+            <div class="lottery-warp">
+                <div class="lottery-container">
+                    <!-- 转盘数字 -->
+                    <!-- <div class="table-box" style="display:none" id="j_lotery-table">
+
+                        <div class="number-list">
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class=" number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-7">
+                                    <span class="  number-item-span">7</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-4">
+                                    <span class="  number-item-span">4</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-25">
+                                    <span class="  number-item-span">25</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-12">
+                                    <span class="  number-item-span">12</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-25">
+                                    <span class=" number-item-span">25</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class=" number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-7">
+                                    <span class="  number-item-span">7</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-4">
+                                    <span class="  number-item-span">4</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-25">
+                                    <span class="  number-item-span">25</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-12">
+                                    <span class="  number-item-span">12</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-25">
+                                    <span class=" number-item-span">25</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class=" number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-7">
+                                    <span class="  number-item-span">7</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-4">
+                                    <span class="  number-item-span">4</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-25">
+                                    <span class="  number-item-span">25</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-12">
+                                    <span class="  number-item-span">12</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-25">
+                                    <span class=" number-item-span">25</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class=" number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-7">
+                                    <span class="  number-item-span">7</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-4">
+                                    <span class="  number-item-span">4</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-25">
+                                    <span class="  number-item-span">25</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-12">
+                                    <span class="  number-item-span">12</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-50">
+                                    <span class="  number-item-span">50</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-25">
+                                    <span class=" number-item-span">25</span>
+                                </div>
+                            </div>
+                            <div class="number-item">
+                                <div class="number-item-box number-item-2">
+                                    <span class="  number-item-span">2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- 转盘图爿 -->
+                    <div class="table-box-img" id="table-box-lottery">
+                        <div class="table-img"></div>
+                    </div>
+                    <!-- 转盘中心下注区 -->
+                    <div class="table-center-box">
+                        <div class="table-center">
+                            <div class="table-lamp">
+                                <div class="cathectic">
+                                    <div class="cathectic-row">
+                                        <div class="cathectic-item" data-mp="2">
+                                            <span class="cathectic-num">2</span>
+                                            <p class="cathectic-p">奖励倍数2</p>
+                                        </div>
+                                        <div class="cathectic-item" data-mp="4">
+                                            <span class="cathectic-num">4</span>
+                                            <p class="cathectic-p">奖励倍数4</p>
+                                        </div>
+                                    </div>
+                                    <div class="cathectic-row">
+                                        <div class="cathectic-item" data-mp="7"> 
+                                            <span class="cathectic-num">7</span>
+                                            <p class="cathectic-p">奖励倍数7</p>
+                                        </div>
+                                        <div class="cathectic-item" data-mp="12">
+                                            <span class="cathectic-num">12</span>
+                                            <p class="cathectic-p">奖励倍数12</p>
+                                        </div>
+                                        <div class="cathectic-item" data-mp="25">
+                                            <span class="cathectic-num">25</span>
+                                            <p class="cathectic-p">奖励倍数25</p>
+                                        </div>
+                                    </div>
+                                    <div class="cathectic-row">
+                                        <div class="cathectic-item" data-mp="50">
+                                            <span class="cathectic-num">50</span>
+                                            <p class="cathectic-p">奖励倍数50</p>
+                                        </div>
+                                        <div class="cathectic-item" data-mp="50">
+                                            <span class="cathectic-num">50</span>
+                                            <p class="cathectic-p">奖励倍数50</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lottery-arrow"></div>
+                    <div class="lottery-time" id="lottery-time-box">
+                        <i class="iconfont icon-shijian"></i>
+                        <span class="time-count" id="j-timer">25</span>
+                    </div>
+                </div>
+
+            </div>
+            <script>
+                // 旋转转盘数组
+                var $items = $(".number-item"),
+                    len = $items.length,
+                    deg = (360 / len).toFixed(2);
+                $items.each(function (index, item) {
+                    var _deg = deg * index;
+                    $(this).css({
+                        'transform': "rotate(" + _deg +
+                            "deg) translateY(-4.1rem)",
+                        'webkitTransform': "rotate(" + _deg +
+                            "deg) translateY(-4.1rem)",
+                        "oTransform": "rotate(" + _deg +
+                            "deg) translateY(-4.1rem)",
+                    })
+                })
+            </script>
+            <div class="user-list">
+                <div class="user-item">
+                    <img src="./img/header.png" alt="" class="header-img">
+                    <p class="user-name">我**你</p>
+                </div>
+                <div class="user-item">
+                    <img src="./img/header.png" alt="" class="header-img">
+                    <p class="user-name">我**你</p>
+                </div>
+                <div class="user-item user-item-big">
+                    <img src="./img/header.png" alt="" class="header-img">
+                    <p class="user-name">我**你</p>
+                </div>
+                <div class="user-item">
+                    <img src="./img/header.png" alt="" class="header-img">
+                    <p class="user-name">我**你</p>
+                </div>
+                <div class="user-item">
+                    <img src="./img/header.png" alt="" class="header-img">
+                    <p class="user-name">我**你</p>
+                </div>
+            </div>
+            <div class="chipIn-list">
+                <div class="chipIn-item chipIn-item-10 active" data-betNum="10">
+                    <svg class="chipIn-item-svg">
+                        <use xlink:href="#chipIn-item-10" />
+                    </svg>
+                </div>
+                <div class="chipIn-item chipIn-item-50" data-betNum="50">
+                    <svg class="chipIn-item-svg">
+                        <use xlink:href="#chipIn-item-50" />
+                    </svg>
+                </div>
+                <div class="chipIn-item chipIn-item-100" data-betNum="100">
+                    <svg class="chipIn-item-svg">
+                        <use xlink:href="#chipIn-item-100" />
+                    </svg>
+                </div>
+                <div class="chipIn-item chipIn-item-500" data-betNum="500">
+                    <svg class="chipIn-item-svg">
+                        <use xlink:href="#chipIn-item-500" />
+                    </svg>
+
+                </div>
+                <div class="chipIn-item chipIn-item-1000" data-betNum="1000">
+                    <svg class="chipIn-item-svg">
+                        <use xlink:href="#chipIn-item-1000" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
